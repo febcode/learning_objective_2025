@@ -1,6 +1,6 @@
 roadmap that includes **Django** for the backend, alongside **React**, **Angular**, **Node.js**, and **Python**. 
 
-#Project: Task Manager App
+# Project: Task Manager App
 A basic task management app where users can:
 
 - Create tasks with a title, description, due date, and status (To Do, In Progress, Done).
