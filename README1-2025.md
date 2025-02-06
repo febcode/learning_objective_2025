@@ -1,6 +1,61 @@
- roadmap that includes **Django** for the backend, alongside **React**, **Angular**, **Node.js**, and **Python**. 
+roadmap that includes **Django** for the backend, alongside **React**, **Angular**, **Node.js**, and **Python**. 
 
+#Project: Task Manager App
+A basic task management app where users can:
 
+- Create tasks with a title, description, due date, and status (To Do, In Progress, Done).
+- Update task details and change the status.
+- Delete tasks.
+- View a list of tasks with filtering options.
+
+### **Database Schema (MongoDB)**
+We'll have a `tasks` collection, which will store each task as a document.
+
+#### **Schema for a Task Document:**
+```json
+{
+  "_id": ObjectId,
+  "title": "Task Title",
+  "description": "Task Description",
+  "due_date": ISODate("2025-02-07T00:00:00Z"),
+  "status": "To Do",  // Could be "To Do", "In Progress", "Done"
+  "created_at": ISODate("2025-02-06T12:00:00Z"),
+  "updated_at": ISODate("2025-02-06T12:30:00Z")
+}
+```
+
+### **Collections:**
+1. **tasks**  
+   - **_id**: MongoDB automatically generates a unique identifier for each task.
+   - **title**: A string representing the task's title.
+   - **description**: A string representing the details of the task.
+   - **due_date**: The date and time when the task is due (optional).
+   - **status**: The current status of the task.
+   - **created_at**: Timestamp of when the task was created.
+   - **updated_at**: Timestamp of the last update made to the task.
+
+2. **users** (if you want to add user management later)  
+   - **_id**: MongoDB-generated unique user ID.
+   - **username**: User’s login name.
+   - **email**: User's email address.
+   - **password_hash**: Hashed password.
+   - **created_at**: Timestamp when the user was created.
+
+### **Backend API Endpoints (Python backend with FastAPI/Flask example)**:
+1. **POST /tasks**  
+   Create a new task.
+2. **GET /tasks**  
+   Fetch all tasks or tasks filtered by status.
+3. **GET /tasks/{task_id}**  
+   Fetch a task by its unique ID.
+4. **PUT /tasks/{task_id}**  
+   Update an existing task.
+5. **DELETE /tasks/{task_id}**  
+   Delete a task.
+
+This basic structure will give you a solid foundation to build your MEARN stack project and adapt it for a Python backend.
+
+Let me know if you need help setting up specific components!
 ### **Step 1: Set Up the Development Environment**
 - **Install Required Tools:**
   - **Node.js** for React, Angular, and Express.js.
